@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 import torchvision
 from torchvision import transforms
 from torch.utils.data.dataloader import DataLoader
+import multiprocessing
+multiprocessing.set_start_method('spawn',True)
 
 BATCH_SIZE = 128
 NUM_WORKERS = 2

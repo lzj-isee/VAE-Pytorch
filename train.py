@@ -11,6 +11,8 @@ from torchvision.utils import save_image
 from VAE import *
 from utils import prepare_MNIST
 import os
+import multiprocessing
+multiprocessing.set_start_method('spawn',True)
 
 BATCH_SIZE = 128
 NUM_WORKERS = 2
