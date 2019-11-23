@@ -19,7 +19,6 @@ Z_DIM = 20
 LEARNING_RATE = 1e-3
 INPUT_DIM = 28 * 28
 
-
 def run(num_epochs=10):
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	myVAE = VAE(INPUT_DIM, H_DIM, Z_DIM).to(device)
