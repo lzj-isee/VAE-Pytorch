@@ -5,7 +5,7 @@
     @Comment : 
 """
 
-import torch
+import torch 
 import torch.optim as  optim
 from torchvision.utils import save_image
 from VAE import *
@@ -25,7 +25,7 @@ def run(num_epochs=10):
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	myVAE = VAE(INPUT_DIM, H_DIM, Z_DIM).to(device)
 	optimizer = optim.Adam(myVAE.parameters(), lr=LEARNING_RATE)
-
+	
 	trainloader, testloader, classes = prepare_MNIST(BATCH_SIZE, NUM_WORKERS)
 	for epoch in range(num_epochs):
 		inputs = None
